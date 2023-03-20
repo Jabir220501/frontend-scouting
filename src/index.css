@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.content{
+    margin-top: 80px;
+    width: calc(100vw - 250px);
+    height: calc(100vh - 75px);
+}
+.content{
+    margin-top: 80px;
+    width: calc(100vw - 250px);
+    height: calc(100vh - 75px);
+}
+
+.navbar{
+    margin-right: 240px;
+    width: calc(100vw - 250px);
+}
+
+.nameForm, .loginFormSubmit{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

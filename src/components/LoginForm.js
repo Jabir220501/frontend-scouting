@@ -10,27 +10,41 @@ function LoginForm() {
     localStorage.setItem("email", email);
   };
   return (
-    <form onSubmit={handleSubmit} className="bg-cyan-500 w-200 h-80 p-14" >
-      <label>
-        Name:
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Email:
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </label>
-      <button type="submit">Submit</button>
-    </form>
+    <div className="content h-screen flex items-center justify-center bg-gray-50">
+      <form
+        onSubmit={handleSubmit}
+        className="nameForm p-14 flex flex-col items-center justify-center bg-white rounded-xl"
+      >
+        <label className="mb-5 ml-3 w-full">
+          Name:
+          <input
+            className="p-1 border border-gray-200 rounded-md w-full"
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </label>
+        <label className="w-full mb-5 ml-3">
+          Email:
+          <input
+            className="p-1 border border-gray-200 rounded-md w-full"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </label>
+        <a href="./" className="w-full">
+          <button
+            type="submit"
+            className="loginFormSubmit bg-blue-600 p-2 w-full text-white rounded-lg"
+          >
+            Submit
+          </button>
+        </a>
+      </form>
+    </div>
   );
 }
 
