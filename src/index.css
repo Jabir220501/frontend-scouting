@@ -19,6 +19,10 @@ body{
     height: calc(100vh - 75px);
 }
 
+.question{
+    height: 100%;
+}
+
 .navbar{
     margin-right: 240px;
     width: calc(100vw - 250px);
@@ -26,4 +30,13 @@ body{
 
 .nameForm, .loginFormSubmit{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.active{
+    color: #2563EB;
+    font-weight: 500;
+}
+
+.percentageBar{
+    transition: 0.5s ease 0s;
 }

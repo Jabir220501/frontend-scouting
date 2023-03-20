@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 function ProgressSidebar() {
-  const percentage = 25;
+  const [percentage, setPercentage] = useState(0);
+  useEffect(() => {
+    setPercentage(localStorage.getItem("progress"));
+  });
+
+  const percentageO = percentage;
   return (
     <div className="w-60 h-full fixed top-0 z-50 bg-white right-0 border-l border-gray-100">
-      <div className="w-40">
+      <div className="w-40 m-auto mt-8">
         <CircularProgressbar
-          value={percentage}
-          text={`${percentage}%`}
+          value={percentageO}
+          text={`${percentageO}%`}
           styles={{
             path: {
               // Path color
@@ -43,6 +48,9 @@ function ProgressSidebar() {
             width: "120px",
           }}
         />
+      </div>
+      <div>
+          <h1 className="text-2xl font-bold text-gray-800">1/5</h1>
       </div>
     </div>
   );
