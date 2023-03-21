@@ -28,7 +28,7 @@ function Taak3() {
         />
         <a href="/score" className="w-full">
           <button className="loginFormSubmit bg-blue-600 p-2 w-full text-white rounded-lg text-white shadow-sm shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
-            Volgende
+            Inleveren
           </button>
         </a>
       </div>

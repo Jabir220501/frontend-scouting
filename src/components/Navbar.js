@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 function Navbar() {
-  const location = useLocation(); // once ready it returns the 'window.location' object
+  const location = useLocation();
   const [url, setUrl] = useState(null);
   const [percentage, setPercentage] = useState(0);
 
@@ -12,6 +12,8 @@ function Navbar() {
   useEffect(() => {
     setPercentage(localStorage.getItem("progress"));
   });
+
+  console.log(percentage)
 
   const handleProgress = (percentage) => {
     localStorage.setItem("progress", percentage);
@@ -74,7 +76,7 @@ function Navbar() {
         <div
           className={
             "percentageBar bg-blue-600 h-2 rounded-r-full " +
-            (`w-${percentage}`)
+            ("p" + percentage)
           }
         ></div>
       </div>

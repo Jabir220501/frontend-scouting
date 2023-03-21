@@ -40,3 +40,19 @@ body{
 .percentageBar{
     transition: 0.5s ease 0s;
 }
+
+.p0{
+    width: 0%;
+}
+.p25{
+    width: 25%;
+}
+.p50{
+    width: 50%;
+}
+.p75{
+    width: 75%;
+}
+.p100{
+    width: 100%;
+}
